@@ -1,0 +1,57 @@
+{% extends "layouts/layout1.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% load gallery_tags %}
+
+{% block description %}{% endblock %}
+{% block keywords %}{% endblock %}
+{% block title %}{% trans "Лента новостей" %}{% endblock %}
+
+{% block styles %}
+	{% if news.gallery %}
+		<link href="{% static "deps/jsOnlyLightbox/css/lightbox.min.css" %}" type="text/css" rel="stylesheet">
+	{% endif %}
+{% endblock %}
+
+{% block container %}
+	<div class="row news-list">
+		<div class="col-xs-12">
+
+			<ol class="breadcrumb">
+				<li><a href="{% url "news:news_list" %}">{% trans "Новости" %}</a></li>
+				{% if news.category %}
+					<li><a href="{% url "news:news_list" %}?c={{ news.category.slug }}">{{ news.category.title }}</a></li>
+				{% endif %}
+				<li class="active">{{ news.title }}</li>
+			</ol>
+
+			<div class="page-header">
+				<h4>{{ news.title }}<small class="pull-right">{{ news.pud_date|date:"d.m.Y" }}</small></h4>
+			</div>
+
+			<p>
+				{{ news.teaser|safe }}
+			</p>
+
+			<p>
+				{{ news.body|safe }}
+			</p>
+
+			{% if news.gallery %}
+				<div class="gallery-block">
+					<h4 class="gallery-title">{{ news.gallery.title }}</h4>
+					<p>{{ news.gallery.desc|safe }}</p>
+					{% show_gallery news.gallery.id %}
+					<div class="clearfix"></div>
+				</div>
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}
+
+{% block scripts %}
+	{% if news.gallery %}
+		<script type="text/javascript" src="{% static "deps/jsOnlyLightbox/js/lightbox.min.js" %}"></script>
+		<script type="text/javascript">var lightbox = new Lightbox();lightbox.load();</script>
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,7 @@
+{% if images_list %}
+{% for image in images_list %}
+<div class="col-xs-6 col-sm-3 col-md-4 col-lg-4 gallery-item">
+	<img class="jslghtbx-thmb" src="{{ image.img.url_sm }}" alt="{{ image.sign }}" data-jslghtbx="{{ image.img.url }}" data-jslghtbx-group="mygroup1">
+</div>
+{% endfor %}
+{% endif %}

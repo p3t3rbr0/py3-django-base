@@ -1,0 +1,43 @@
+{% extends "layouts/layout1.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% load gallery_tags %}
+
+{% block description %}{{ page.mdesc }}{% endblock %}
+{% block keywords %}{{ page.mkeys }}{% endblock %}
+{% block title %}{{ page.mtitle }}{% endblock %}
+
+{% block styles %}
+{% if page.gallery %}
+<link href="{% static "deps/lightbox2/css/lightbox.min.css" %}" type="text/css" rel="stylesheet">
+{% endif %}
+{% endblock %}
+
+{% block container %}
+<div class="row">
+	<div class="col-xs-12">
+		<div class="page-header">
+			<h4>{{ page.title }}</h4>
+		</div>
+
+		<p>
+			{{ page.body|safe }}
+		</p>
+
+		{% if page.gallery %}
+		<div class="gallery-block">
+			<h4 class="gallery-title">{{ page.gallery.title }}</h4>
+			<p>{{ page.gallery.desc|safe }}</p>
+			{% show_gallery page.gallery.id %}
+			<div class="clearfix"></div>
+		</div>
+		{% endif %}
+	</div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{% if page.gallery %}
+<script type="text/javascript" src="{% static "deps/lightbox2/js/lightbox.min.js" %}"></script>
+{% endif %}
+{% endblock %}

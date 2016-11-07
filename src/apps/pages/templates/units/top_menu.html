@@ -1,0 +1,32 @@
+{% load i18n %}
+{% load mptt_tags %}
+
+<ul class="nav navbar-nav">
+	{% if is_news %}
+		<li><a href="{% url "news:news_list" %}">{% trans "Новости" %}</a></li>
+	{% endif %}
+	{% if menu_list %}
+		{% recursetree menu_list %}
+		{% if not node.is_leaf_node %}
+			<li class="dropdown">
+				<a href="#{{ node.slug }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+					{{ node.title }}&nbsp;<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+					{{ children }}
+				</ul>
+			</li>
+		{% else %}
+			<li{% if if_active %} class="active"{% endif %}>
+				<a href="{% if node.external_link %}{{ node.external_link }}{% else %}{% url "pages:show_page" node.slug %}{% endif %}">
+					{{ node.title }}
+				</a>
+			</li>
+			{% if node.is_separate %}
+				<li role="separator" class="divider"></li>
+			{% endif %}
+		{% endif %}
+        {% endrecursetree %}
+	{% endif %}
+</ul>
+

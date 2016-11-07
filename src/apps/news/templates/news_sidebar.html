@@ -1,0 +1,12 @@
+{% if news_list %}
+<div class="panel panel-default">
+	<div class="panel-heading">Последние 5 новостей</div>
+	<ul class="list-group">
+		{% for news in news_list %}
+		<li class="list-group-item">
+			<a href="{% url "news:news_detail" news.pk %}">{{ news.title }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+{% endif %}

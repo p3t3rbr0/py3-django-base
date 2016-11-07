@@ -1,0 +1,226 @@
+{% extends "layouts/layout1.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% load news_tags %}
+
+{% block description %}{% endblock %}
+{% block keywords %}{% endblock %}
+{% block title %}{% trans "Лента новостей" %}{% endblock %}
+
+{% block styles %}{% endblock %}
+
+{% block container %}
+	<div class="row news-list">
+		<div class="hidden-xs col-sm-4 col-md-3 col-lg-3">
+
+			<div class="panel panel-default">
+				<div class="panel-heading">{% trans "Категории" %}</div>
+				<ul class="list-group">
+					{% if not cur_category %}
+						<li class="list-group-item active">{% trans "Все" %}</li>
+					{% else %}
+						<li class="list-group-item"><a href="{% url "news:news_list" %}">{% trans "Все" %}</a></li>
+					{% endif %}
+					{% for category in categories %}
+						{% if cur_category and category.pk == cur_category.pk %}
+							<li class="list-group-item active">{{ category.title }}</li>
+						{% else %}
+							<li class="list-group-item">
+								<a href="{% url "news:news_list" %}?c={{ category.slug }}">
+									{{ category.title }}
+								</a>
+							</li>
+						{% endif %}
+					{% endfor%}
+				</ul>
+			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">{% trans "Сортировка по дате" %}</div>
+				<ul class="list-group">
+					{% if cur_dt == 'today' %}
+						<li class="list-group-item active">{% trans "За сегодня" %}</li>
+					{% else %}
+						<li class="list-group-item"><a href="{% url "news:news_list" %}?d=today">{% trans "За сегодня" %}</a></li>
+					{% endif %}
+
+					{% if cur_dt == 'yesterday' %}
+						<li class="list-group-item active">{% trans "За вчера" %}</li>
+					{% else %}
+						<li class="list-group-item"><a href="{% url "news:news_list" %}?d=yesterday">{% trans "За вчера" %}</a></li>
+					{% endif %}
+
+					{% if cur_dt == 'week' %}
+						<li class="list-group-item active">{% trans "За эту неделю" %}</li>
+					{% else %}
+						<li class="list-group-item"><a href="{% url "news:news_list" %}?d=week">{% trans "За эту неделю" %}</a></li>
+					{% endif %}
+
+					{% if cur_dt == 'month' %}
+						<li class="list-group-item active">{% trans "За этот месяц" %}</li>
+					{% else %}
+						<li class="list-group-item"><a href="{% url "news:news_list" %}?d=month">{% trans "За этот месяц" %}</a></li>
+					{% endif %}
+
+					{% if cur_dt == 'year' %}
+						<li class="list-group-item active">{% trans "За этот год" %}</li>
+					{% else %}
+						<li class="list-group-item"><a href="{% url "news:news_list" %}?d=year">{% trans "За этот год" %}</a></li>
+					{% endif %}
+				</ul>
+			</div>
+
+			{% if tags %}
+				<div class="panel panel-default">
+					<div class="panel-heading">{% trans "Облако тегов" %}</div>
+					<div class="panel-body">
+						{% for tag in tags %}
+							<a href="{% url "news:news_list" %}?t={{ tag.slug }}">{{ tag.title }}</a>
+						{% endfor %}
+					</div>
+				</div>
+			{% endif %}
+
+		</div>
+
+		<div class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+
+			<div class="page-header">
+				<h4 class="no-top-margin">
+					{% trans "Лента новостей" %}
+					<small>
+						{% if cur_category %}
+							{{ cur_category.title }}
+						{% elif cur_tag %}
+							{{ cur_tag.title }}
+						{% else %}
+							{% trans "Все" %}
+						{% endif %}
+					</small>
+				</h4>
+			</div>
+
+			{% if news_list %}
+				{% for news in news_list %}
+					<div class="visible-xs">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<a href="{% url "news:news_detail" news.pk %}">{{ news.title }}</a>
+								<span class="news-date pull-right">{{ news.pub_date|date:"d.m.Y" }}</span>
+							</div>
+							<div class="panel-body">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object" src="{{ news.cover.url_sm }}" alt="{{ news.title }}">
+									</div>
+									<div class="media-body">
+										<p>
+											{{ news.teaser|safe }}
+										</p>
+										<a href="{% url "news:news_detail" news.pk %}" class="col-xs-12 btn btn-sm btn-primary">
+											{% trans "Подробнее" %}
+										</a>
+									</div>
+								</div>
+							</div>
+
+							{% if news.tags.all|length %}
+								<div class="panel-footer">
+									<div class="tags-list">
+										<div class="pull-left"><span class="glyphicon glyphicon-tag margin-right-30"></span></div>
+										<ul class="inline">
+											{% for tag in news.tags.all %}
+												<li><a href="{% url "news:news_list" %}?t={{ tag.slug }}">{{ tag.title }}</a></li>
+											{% endfor %}
+										</ul>
+									</div>
+								</div>
+							{% endif %}
+						</div>
+					</div><!-- .visible-xs -->
+					<div class="visible-sm">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<a href="{% url "news:news_detail" news.pk %}">{{ news.title }}</a>
+								<span class="news-date pull-right">{{ news.pub_date|date:"d.m.Y" }}</span>
+							</div>
+							<div class="panel-body">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object" src="{{ news.cover.url_sm }}" alt="{{ news.title }}">
+									</div>
+									<div class="media-body">
+										<p>
+											{{ news.teaser|safe }}
+										</p>
+										<a href="{% url "news:news_detail" news.pk %}" class="col-sm-12 btn btn-sm btn-primary">
+											{% trans "Подробнее" %}
+										</a>
+									</div>
+								</div>
+							</div>
+
+							{% if news.tags.all|length %}
+								<div class="panel-footer">
+									<div class="tags-list">
+										<div class="pull-left"><span class="glyphicon glyphicon-tag margin-right-30"></span></div>
+										<ul class="inline">
+											{% for tag in news.tags.all %}
+												<li><a href="{% url "news:news_list" %}?t={{ tag.slug }}">{{ tag.title }}</a></li>
+											{% endfor %}
+										</ul>
+									</div>
+								</div>
+							{% endif %}
+						</div>
+					</div> <!-- .visible-sm -->
+					<div class="visible-md visible-lg">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<a href="{% url "news:news_detail" news.pk %}">{{ news.title }}</a>
+								<span class="news-date pull-right">{{ news.pub_date|date:"d.m.Y" }}</span>
+							</div>
+							<div class="panel-body">
+								<div class="media">
+									<div class="media-left">
+										<img class="media-object" src="{{ news.cover.url_sm }}" alt="{{ news.title }}">
+									</div>
+									<div class="media-body">
+										<p>
+											{{ news.teaser|safe }}
+										</p>
+										<a href="{% url "news:news_detail" news.pk %}" class="btn btn-sm btn-primary pull-right">
+											{% trans "Подробнее" %}
+										</a>
+									</div>
+								</div>
+							</div>
+
+							{% if news.tags.all|length %}
+								<div class="panel-footer">
+									<div class="tags-list">
+										<div class="pull-left"><span class="glyphicon glyphicon-tag margin-right-30"></span></div>
+										<ul class="inline">
+											{% for tag in news.tags.all %}
+												<li><a href="{% url "news:news_list" %}?t={{ tag.slug }}">{{ tag.title }}</a></li>
+											{% endfor %}
+										</ul>
+									</div>
+								</div>
+							{% endif %}
+						</div>
+					</div><!-- .visible-md .visible-lg -->
+				{% endfor %}
+
+				{% pagination news_list %}
+			{% else %}
+				<em>Нет новостей</em>
+			{% endif %}
+
+			<div class="clearfix"></div>
+		</div>
+
+	</div>
+{% endblock %}
+
+{% block scripts %}{% endblock %}

@@ -1,0 +1,86 @@
+DjangoBase Changelog
+
+* v0.5.0 [01.08.2018]
+	- Added: Makefile
+	- Added: .flake8 config
+	- Added: cropying with Pillow-SIMD
+	- Added: conf/ directory with uwsgi and nginx configs
+	- Removed: cropying with Pillow
+	- Removed: all custom shell scripts
+	- Upgraded: all python dependeces
+	- Fixed: project file structure
+	- Improved: localization
+	- Improved: now code in pep8 (used flake8)
+	- Improved: models for accounts, pages, news
+	- Improved: all templates rewrite to Bootstrap 4.x
+
+* v0.4.2 [16.07.2017]
+	- Added: accounts error template
+	- Upgrade dependeces (Pillow, Django, django-ckeditor).
+	- Fixed: User activation template and view.
+
+* v0.4.1 [20.05.2017]
+	- Added: AUTHORS
+	- Added: CHANGELOG
+	- Added: README.ru.md
+	- Changed: Replace client side gallery library (fahrenheit -> lightbox2)
+	- Fixed: README.md
+	- Fixed: Localization
+	- Fixed: bin/deploy.sh
+	- Fixed: Metainfo in content pages
+	- Fixed: Template extensions .djhtml -> .html
+	- Fixed: Some refactoring in pages application
+	- Removed: bin/start_dev.sh
+	- Removed: bin/generate_locale.sh
+	- Upgraded: JQuery to 3.2.1
+	- Upgraded: Django to 1.11.1
+
+
+* v0.4.0 [01.05.2017]
+
+	- Added: Template layout for mails
+	- Added: Template layout for errors (400,403,404,500)
+	- Added: Sample configs (nginx and uwsgi) for deploying app
+	- Added: Working functionality for accounts app
+	- Added: bin/run_dev.sh <varios ip:port> script for runing dev-webserver
+	- Added: en translatin
+	- Changed: bin/new_project.sh
+	- Changed: Update and regenerate locales
+	- Changed: Some improves in admon interface
+	- Changed: rename and changed bin/run.sh -> bin/deploy.sh
+	- Fixed: Fixed and improved documentation
+	- Fixed: Improved adaptivity for news apps
+	- Fixed: Fixed warning related to incorrect position contenttypes app in APP_LIST
+	- Removed: supplement app
+	- Removed: django-grapelli dependence
+	- Upgraded: Pillow up to v4.1.1
+	- Upgraded: Django up to v1.11.0
+	- Upgraded: django-mptt up to v0.8.7
+	- Upgraded: django-ckeditor up to v5.2.2
+
+
+* v0.3.1 [10.12.2016]
+	- Fixed: News filter.
+	- Fixed: Some refactoring news app.
+	- Fixed: View of unpublished news.
+
+
+* v0.3 [06.12.2016]
+	- Fixed: Gallery for pages and news applications.
+	- Fixed: Templates for content pages.
+	- Changed: Upgrade dependences.
+	- Changed: JQuery full instead JQuery.Slim.
+	- Added: Basic localisation.
+	- Added: Some unit-tests for news.
+	- Added: Supplement template for content pages - default_with_sidebar.html.
+
+
+* v0.2 [12.11.2016]
+	- Fixed: Some small fixes in news application.
+	- Added: Paginator in news application.
+	- Added: Script for autocreate new project.
+
+
+* v0.1 [07.11.2016]
+	- Added: Created github-repository for project. Written README.
+	- Added: Created basic modules: accounts, menu, pages, gallery, news.

@@ -1,0 +1,58 @@
+{% if page_obj.paginator.num_pages > 1 %}
+
+	<nav aria-label="Page navigation" class="pull-right">
+		<div class="btn-group margin-right-30 pull-left">
+			<a class="btn btn-success dropdown-toggle" data-toggle="dropdown" href="javascript:;" aria-expanded="false">
+				Перейти на страницу&nbsp;<span class="caret"></span>
+			</a>
+			<div class="dropdown-menu">
+				<form class="form" action="" method="GET">
+					<div class="form-group">
+						<div class="col-md-12">
+							<input type="number" name="page" class="form-control" placeholder="Номер страницы" />
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<ul class="pagination pagination-sm pull-right">
+			{% if page_obj.has_previous %}
+				<li><a href="?page={{ page_obj.previous_page_number }}">«</a></li>
+			{% else %}
+				<li class="disabled"><a href="#">«</a></li>
+			{% endif %}
+
+			{% for pnum in begin %}
+				<li {% if page_obj.number == pnum %} class="active"{% endif %}>
+					<a href="?page={{ pnum }}">{{ pnum }}</a>
+				</li>
+			{% endfor %}
+
+			{% if middle %}
+				<li class="disabled"><a href="#"><strong>...</strong></a></li>
+				{% for pnum in middle %}
+					<li {% if page_obj.number == pnum %} class="active"{% endif %}>
+						<a href="?page={{ pnum }}">{{ pnum }}</a>
+					</li>
+				{% endfor %}
+			{% endif %}
+
+			{% if end %}
+				<li class="disabled"><a href="#"><strong>...</strong></a></li>
+				{% for pnum in end %}
+					<li {% if page_obj.number == pnum %} class="active"{% endif %}>
+						<a href="?page={{ pnum }}">{{ pnum }}</a>
+					</li>
+				{% endfor %}
+			{% endif %}
+
+			{% if page_obj.has_next %}
+				<li><a href="?page={{ page_obj.next_page_number }}">»</a></li>
+			{% else %}
+				<li class="disabled"><a href="#">»</a></li>
+			{% endif %}
+		</ul>
+		<div class="clearfix"></div>
+	</nav>
+{% endif %}

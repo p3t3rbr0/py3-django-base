@@ -1,0 +1,714 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-19 19:31+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: apps/accounts/admin.py:13 apps/accounts/forms.py:21
+#: apps/accounts/forms.py:39 apps/accounts/forms.py:57
+#: apps/accounts/templates/login.html:30
+#: apps/accounts/templates/registration.html:42
+#: apps/accounts/templates/set_password.html:22
+msgid "Пароль"
+msgstr "Password"
+
+#: apps/accounts/admin.py:14 apps/accounts/forms.py:43
+#: apps/accounts/forms.py:61 apps/accounts/templates/registration.html:51
+#: apps/accounts/templates/set_password.html:31
+msgid "Подтверждение пароля"
+msgstr "Password confirmation"
+
+#: apps/accounts/admin.py:24
+msgid "Пароли не совпадают"
+msgstr "Passwords mismatch"
+
+#: apps/accounts/admin.py:52
+msgid "Аккаунт"
+msgstr "Account"
+
+#: apps/accounts/admin.py:53
+msgid "Личная информация"
+msgstr "Personal information"
+
+#: apps/accounts/admin.py:54
+msgid "Права доступа"
+msgstr "Access rights"
+
+#: apps/accounts/admin.py:60
+msgid "Новый пользователь"
+msgstr "New user"
+
+#: apps/accounts/admin.py:86 apps/accounts/models.py:35
+#: apps/accounts/templates/profile.html:24
+msgid "Аватар"
+msgstr "Avatar"
+
+#: apps/accounts/forms.py:17 apps/accounts/forms.py:31
+#: apps/accounts/models.py:32 apps/accounts/templates/login.html:21
+#: apps/accounts/templates/profile.html:38
+#: apps/accounts/templates/registration.html:24
+msgid "Имя пользователя"
+msgstr "Username"
+
+#: apps/accounts/forms.py:25 apps/accounts/templates/login.html:40
+msgid "Запомнить меня"
+msgstr "Remember me"
+
+#: apps/accounts/forms.py:35 apps/accounts/forms.py:50
+#: apps/accounts/models.py:33 apps/accounts/templates/profile.html:48
+msgid "E-mail"
+msgstr "E-mail"
+
+#: apps/accounts/models.py:14
+msgid "У пользователя должен быть email адрес"
+msgstr "The user must have an email address"
+
+#: apps/accounts/models.py:16
+msgid "У пользователя должно быть имя"
+msgstr "The user must have an username"
+
+#: apps/accounts/models.py:44 apps/accounts/templates/profile.html:60
+msgid "Имя"
+msgstr "First name"
+
+#: apps/accounts/models.py:45 apps/accounts/templates/profile.html:63
+msgid "Фамилия"
+msgstr "Last name"
+
+#: apps/accounts/models.py:46 apps/accounts/templates/profile.html:58
+#: apps/accounts/templates/profile.html:66
+msgid "Дополнительная информация"
+msgstr "Additional Information"
+
+#: apps/accounts/models.py:47
+msgid "UID"
+msgstr "UID"
+
+#: apps/accounts/models.py:48
+msgid "Запись активирована"
+msgstr "Account is activated"
+
+#: apps/accounts/models.py:49
+msgid "Администратор"
+msgstr "Administrator"
+
+#: apps/accounts/models.py:50
+msgid "Аккаунт подтвержден"
+msgstr "Account confirmed"
+
+#: apps/accounts/models.py:51
+msgid "Привилегированный пользователь"
+msgstr "Superuser"
+
+#: apps/accounts/templates/login.html:6 apps/accounts/templates/login.html:17
+msgid "Форма входа"
+msgstr "Login form"
+
+#: apps/accounts/templates/login.html:48 templates/base.html:72
+msgid "Войти"
+msgstr "Login"
+
+#: apps/accounts/templates/login.html:50 apps/accounts/templates/login.html:54
+msgid "Забыли пароль?"
+msgstr "Forgot your password?"
+
+#: apps/accounts/templates/login.html:52
+#: apps/accounts/templates/profile.html:74
+#: apps/accounts/templates/registration.html:63
+#: apps/accounts/templates/registration.html:74
+#: apps/accounts/templates/reset_password.html:34
+#: apps/accounts/templates/reset_password.html:45
+#: apps/accounts/templates/set_password.html:40
+msgid "Отмена"
+msgstr "Cancel"
+
+#: apps/accounts/templates/login.html:55
+msgid "Нет аккаунта? Зарегистрируйтесь!"
+msgstr "No account? Register now!"
+
+#: apps/accounts/templates/profile.html:7
+#: apps/accounts/templates/profile.html:20
+msgid "Профиль пользователя"
+msgstr "User Profile"
+
+#: apps/accounts/templates/profile.html:27
+msgid "Выбрать"
+msgstr "Choose"
+
+#: apps/accounts/templates/profile.html:35
+msgid "Регистрационная информация"
+msgstr "Registration information"
+
+#: apps/accounts/templates/profile.html:71
+msgid "Сохранить"
+msgstr "Save"
+
+#: apps/accounts/templates/profile.html:89
+msgid "Настройки профиля сохранены"
+msgstr "Profile settings saved"
+
+#: apps/accounts/templates/registration.html:6
+msgid "Регистрация"
+msgstr "Registration"
+
+#: apps/accounts/templates/registration.html:19
+msgid "Форма регистрации"
+msgstr "Registration form"
+
+#: apps/accounts/templates/registration.html:60
+#: apps/accounts/templates/registration.html:70 templates/base.html:73
+msgid "Зарегистрироваться"
+msgstr "Sign up now"
+
+#: apps/accounts/templates/reset_password.html:6
+msgid "Смена пароля"
+msgstr "Change Password"
+
+#: apps/accounts/templates/reset_password.html:18
+msgid "Форма смены пароля"
+msgstr "Password change form"
+
+#: apps/accounts/templates/reset_password.html:32
+#: apps/accounts/templates/reset_password.html:41
+msgid "Продолжить"
+msgstr "Continue"
+
+#: apps/accounts/templates/set_password.html:6
+msgid "Создание нового пароля"
+msgstr "Create a new password"
+
+#: apps/accounts/templates/set_password.html:18
+msgid "Форма создания нового пароля"
+msgstr "Form to create a new password"
+
+#: apps/accounts/templates/set_password.html:39
+msgid "Сохранить пароль"
+msgstr "Save Password"
+
+#: apps/accounts/templates/thanks.html:6
+msgid "Благодарим за регистрацию"
+msgstr "Thank you for registering"
+
+#: apps/accounts/templates/thanks.html:11
+msgid "Блогодарим за регистрацию!"
+msgstr "Thank you for registering!"
+
+#: apps/accounts/templates/thanks.html:12
+msgid "На указанный Вами e-mail выслано письмо-подтверждение."
+msgstr "A confirmation letter has been sent to your e-mail."
+
+#: apps/accounts/templates/thanks.html:13
+msgid ""
+"Для продолжения регистрации, пожалуйста, перейдите по ссылке, указанной в "
+"письме."
+msgstr ""
+"To continue the registration, please click on the link specified in thethe "
+"letter."
+
+#: apps/accounts/templates/thanks.html:14
+msgid "Перейти на главную"
+msgstr "Go to Main page"
+
+#: apps/accounts/views.py:41
+msgid "Ошибка авторизации!"
+msgstr "Authorisation Error!"
+
+#: apps/accounts/views.py:75
+#, python-format
+msgid "Ошибка! Пользователь с именем '%s' уже существует!"
+msgstr "Error! A user named '%s' already exists!"
+
+#: apps/accounts/views.py:81
+#, python-format
+msgid "Ошибка! Пользовательс с e-mail '%s' уже существует!"
+msgstr "Error! User with e-mail '%s' already exists!"
+
+#: apps/accounts/views.py:88
+msgid "Подтверждение регистрации"
+msgstr "Confirmation of registration"
+
+#: apps/accounts/views.py:95
+msgid "Ошибка при отправки регистрационного письма!"
+msgstr "An error occurred while sending the registration letter!"
+
+#: apps/accounts/views.py:99
+msgid "Ошибка! Пароли не совпадают!"
+msgstr "Error! Passwords do not match!"
+
+#: apps/accounts/views.py:118
+msgid "Ошибка! Невозможно обновить данные пользователя!"
+msgstr "Error! Unable to update user data!"
+
+#: apps/accounts/views.py:120
+msgid "Ошибка! Попытка регистрации по несуществующему ключу!"
+msgstr "Error! Attempt to register for a nonexistent key!"
+
+#: apps/accounts/views.py:148
+msgid "Ошибка! Попытка восстановления пароля для несуществующего пользователя!"
+msgstr "Error! An attempt to restore the password for a non-existent user!"
+
+#: apps/accounts/views.py:166
+msgid "Создание нового пароля для BlankDJP"
+msgstr "Creating a new password for BlankDJP"
+
+#: apps/accounts/views.py:174
+msgid "Ошибка! Отправка email не удалась!"
+msgstr "Error! Sending email failed!"
+
+#: apps/accounts/views.py:176
+msgid "На указзанный e-mail были отправлены Ваши пользовательские данные."
+msgstr "Your e-mail was sent to your user data."
+
+#: apps/accounts/views.py:178
+#, python-format
+msgid "Ошибка! Пользователь с email '%s' не зарегистрирован!"
+msgstr "Error! User with email '%s' is not registered!"
+
+#: apps/feincms/admin/tree_editor.py:291
+msgid "Название"
+msgstr "Title"
+
+#: apps/feincms/admin/tree_editor.py:350 apps/feincms/admin/tree_editor.py:367
+msgid "You do not have permission to modify this object"
+msgstr "You do not have permission to modify this object"
+
+#: apps/feincms/admin/tree_editor.py:483
+msgid "No permission"
+msgstr "No permission"
+
+#: apps/feincms/admin/tree_editor.py:501
+#, python-format
+msgid "%s has been moved to a new position."
+msgstr "%s has been moved to a new position."
+
+#: apps/feincms/admin/tree_editor.py:504
+msgid "Did not understand moving instruction."
+msgstr "Did not understand moving instruction."
+
+#: apps/feincms/admin/tree_editor.py:515
+msgid "Перенос"
+msgstr "Transferring"
+
+#: apps/news/admin.py:9 apps/news/models.py:69
+msgid "Категория"
+msgstr "Category"
+
+#: apps/news/admin.py:20
+msgid "Тег"
+msgstr "Tag"
+
+#: apps/news/admin.py:31
+msgid "Новость"
+msgstr "News"
+
+#: apps/news/admin.py:56
+msgid "Превью"
+msgstr "Preview"
+
+#: apps/news/models.py:14
+msgid "Название категории"
+msgstr "Name of category"
+
+#: apps/news/models.py:16 apps/news/models.py:36 apps/pages/models.py:91
+msgid "Транслит названия"
+msgstr "Title transliteration"
+
+#: apps/news/models.py:19
+msgid ""
+"Транслитерация названия названия категориий. Является частью URL. "
+"Заполняется автоматически."
+msgstr ""
+"Transliteration of the name of the category name. It is part of the URL. "
+"Filled out automatically."
+
+#: apps/news/models.py:23
+msgid "категорию"
+msgstr "category"
+
+#: apps/news/models.py:24 apps/news/templates/news_list.html:17
+msgid "Категории"
+msgstr "Categories"
+
+#: apps/news/models.py:34
+msgid "Название тега"
+msgstr "Tag title"
+
+#: apps/news/models.py:39
+msgid ""
+"Транслитерация названия тега. Является частью URL. Заполняется автоматически."
+msgstr ""
+"Transliteration of the tag name: It is part of the URL, it is filled in "
+"automatically."
+
+#: apps/news/models.py:43
+msgid "тег"
+msgstr "tag"
+
+#: apps/news/models.py:44
+msgid "Теги"
+msgstr "Tags"
+
+#: apps/news/models.py:63
+msgid "Заголовок новости"
+msgstr "News title"
+
+#: apps/news/models.py:65
+msgid "Не более 150 знаков"
+msgstr "Not more than 150 characters"
+
+#: apps/news/models.py:76
+msgid "Обложка"
+msgstr "Cover"
+
+#: apps/news/models.py:85
+msgid "Главное изображение новости"
+msgstr "The main image of the news"
+
+#: apps/news/models.py:88
+msgid "Краткое содержание новости"
+msgstr "News teaser"
+
+#: apps/news/models.py:90
+msgid "Краткая аннотация новости. Текст не более 500 знаков."
+msgstr "Brief summary of the news. Text is not more than 500 characters."
+
+#: apps/news/models.py:93 apps/pages/models.py:41
+msgid "Основной контент"
+msgstr "Main content"
+
+#: apps/news/models.py:95
+msgid "Основное содержимое новости"
+msgstr "The main content of the news"
+
+#: apps/news/models.py:97
+msgid "Дата и время"
+msgstr "Date and time"
+
+#: apps/news/models.py:98
+msgid "Автор новости"
+msgstr "Author news"
+
+#: apps/news/models.py:101 apps/pages/admin.py:29 apps/pages/models.py:50
+msgid "Галерея"
+msgstr "Gallery"
+
+#: apps/news/models.py:104 apps/pages/models.py:53
+msgid "Отображать на данной странице указанную галерею"
+msgstr "Display the specified gallery on this page"
+
+#: apps/news/models.py:107 apps/pages/models.py:56
+msgid "Опубликовано"
+msgstr "Published"
+
+#: apps/news/models.py:109
+msgid "Опубликовать новость после сохранения"
+msgstr "Publish the news after saving"
+
+#: apps/news/models.py:116
+msgid "новость"
+msgstr "news"
+
+#: apps/news/models.py:117 apps/news/templates/news_detail.html:22
+#: apps/pages/templates/units/top_menu.html:6
+msgid "Новости"
+msgstr "News"
+
+#: apps/news/templates/news_detail.html:8 apps/news/templates/news_list.html:8
+#: apps/news/templates/news_list.html:90
+msgid "Лента новостей"
+msgstr "News feed"
+
+#: apps/news/templates/news_list.html:20 apps/news/templates/news_list.html:22
+#: apps/news/templates/news_list.html:97
+msgid "Все"
+msgstr "All"
+
+#: apps/news/templates/news_list.html:39
+msgid "Сортировка по дате"
+msgstr "Sort by date"
+
+#: apps/news/templates/news_list.html:42 apps/news/templates/news_list.html:44
+msgid "За сегодня"
+msgstr "For today"
+
+#: apps/news/templates/news_list.html:48 apps/news/templates/news_list.html:50
+msgid "За вчера"
+msgstr "For yesterday"
+
+#: apps/news/templates/news_list.html:54 apps/news/templates/news_list.html:56
+msgid "За эту неделю"
+msgstr "This week"
+
+#: apps/news/templates/news_list.html:60 apps/news/templates/news_list.html:62
+msgid "За этот месяц"
+msgstr "This month"
+
+#: apps/news/templates/news_list.html:66 apps/news/templates/news_list.html:68
+msgid "За этот год"
+msgstr "This year"
+
+#: apps/news/templates/news_list.html:75
+msgid "Облако тегов"
+msgstr "Tag Cloud"
+
+#: apps/news/templates/news_list.html:121
+#: apps/news/templates/news_list.html:157
+#: apps/news/templates/news_list.html:193
+msgid "Подробнее"
+msgstr "More"
+
+#: apps/pages/admin.py:13
+msgid "Метаинформация"
+msgstr "Metainformation"
+
+#: apps/pages/admin.py:19
+msgid "Содержимое страницы"
+msgstr "Contents of the page"
+
+#: apps/pages/admin.py:24
+msgid "Шаблон и статус"
+msgstr "Template and Status"
+
+#: apps/pages/admin.py:49
+msgid "Пункт меню"
+msgstr "Menu item"
+
+#: apps/pages/admin.py:71
+msgid "Название (ссылка)"
+msgstr "Title (link)"
+
+#: apps/pages/admin.py:75
+msgid "Ссылка"
+msgstr "Link"
+
+#: apps/pages/admin.py:80
+msgid "У выбранных Вами страниц была увеличина позиция на 1"
+msgstr "The pages you selected had an increased position by 1"
+
+#: apps/pages/admin.py:81
+msgid "Увеличить порядок следования у выбранных елементов"
+msgstr "Increase the order of the selected items"
+
+#: apps/pages/admin.py:86
+msgid "У выбранных Вами страниц была уменьшена позиция на 1"
+msgstr "The pages you selected have been reduced by 1 position"
+
+#: apps/pages/admin.py:87
+msgid "Уменьшить порядок следования у выбранных елементов"
+msgstr "Change the order of selected items"
+
+#: apps/pages/admin.py:97
+#, python-format
+msgid ""
+"\n"
+"                        Ошибка!<br>\n"
+"                        %s<br><br>\n"
+"                        <a href='/admin/'>Назад в админку</a>"
+msgstr ""
+"\n"
+"                        Error!<br>\n"
+"                        %s<br><br>\n"
+"                        <a href='/admin/'>Back</a>"
+
+#: apps/pages/admin.py:109
+msgid ""
+"Укажите родительский пункт меню, под который нужно переместить выбранные "
+"страницы"
+msgstr ""
+"Specify the parent menu item under which you want to move the selected pages"
+
+#: apps/pages/admin.py:113
+msgid "Переместить выбранные страницы в родительскую категорию"
+msgstr "Move the selected pages to the parent category"
+
+#: apps/pages/models.py:19
+msgid "Описание страницы"
+msgstr "Page description"
+
+#: apps/pages/models.py:22
+msgid "Краткое описание страницы для поисковых систем (не более 200 смволов)"
+msgstr ""
+"Short description of the page for search engines (no more than 200 symbols)"
+
+#: apps/pages/models.py:25
+msgid "Ключевые слова"
+msgstr "Keywords"
+
+#: apps/pages/models.py:28
+msgid "Перечень поисковых фраз через запятую (для поисковых систем)"
+msgstr "List of search phrases comma (for search engines)"
+
+#: apps/pages/models.py:31
+msgid "Заголовок"
+msgstr "Title"
+
+#: apps/pages/models.py:34
+msgid "Заголовок для данной страницы (название вкладки в браузере)"
+msgstr "Title for this page (title of the tab in the browser)"
+
+#: apps/pages/models.py:37
+msgid "Заголовок страницы"
+msgstr "Page title"
+
+#: apps/pages/models.py:43
+msgid "Шаблон"
+msgstr "Template"
+
+#: apps/pages/models.py:55
+msgid "Последнее обновление"
+msgstr "Last update"
+
+#: apps/pages/models.py:57 apps/pages/templates/index.html:8
+#: apps/pages/templates/not_exist.html:7
+msgid "Главная"
+msgstr "Index page"
+
+#: apps/pages/models.py:58
+msgid "Отображать в футере"
+msgstr "Display in footer"
+
+#: apps/pages/models.py:68
+msgid "страницу"
+msgstr "page"
+
+#: apps/pages/models.py:69
+msgid "Страницы"
+msgstr "Pages"
+
+#: apps/pages/models.py:82
+msgid "Родительский пункт меню"
+msgstr "Parent menu item"
+
+#: apps/pages/models.py:85
+msgid "Название пункта"
+msgstr "Item name"
+
+#: apps/pages/models.py:88
+msgid "Название пункта меню"
+msgstr "Menu item title"
+
+#: apps/pages/models.py:95
+msgid "Часть URL (заполняется автоматически)"
+msgstr "Part of the URL (filled in automatically)"
+
+#: apps/pages/models.py:98
+msgid "Порядок следования"
+msgstr "Order of succession"
+
+#: apps/pages/models.py:101
+msgid "Порядок следования данного пункта меню относительно других пунктов"
+msgstr "The order of this menu item relative to other items"
+
+#: apps/pages/models.py:104
+msgid "Внешняя ссылка"
+msgstr "External link"
+
+#: apps/pages/models.py:107
+msgid "Ссылка на внешний источник"
+msgstr "External source reference"
+
+#: apps/pages/models.py:111
+msgid "Страница"
+msgstr "Page"
+
+#: apps/pages/models.py:114
+msgid "Прикрепить страницу к данному пункту меню"
+msgstr "Attach a page to this menu item"
+
+#: apps/pages/models.py:154
+msgid "пункт меню"
+msgstr "menu item"
+
+#: apps/pages/models.py:155
+msgid "Меню"
+msgstr "Menu"
+
+#: apps/pages/templates/index.html:18
+msgid ""
+"\n"
+"\t\t\t\t\tНабор базовых компонентов, для разработки типовых веб-проектов на "
+"основе фреймворка Django.\n"
+"\t\t\t\t\tЦель данного проекта - иметь под рукой программное решение для "
+"быстрого развертывания и последущей доработки типового web-проекта на основе "
+"стека Python/Django, с минимальным количеством зависимостей.\n"
+"\t\t\t\t\t"
+msgstr ""
+"\n"
+"\t\t\t\t\t Set of basic components, for the development of typical web "
+"projects on the Based on the Django framework.\n"
+"\t\t\t\t\t The purpose of this project is to have at your fingertips a "
+"software solution for rapid deployment and further development of a typical "
+"web-project based on stack of Python/Django, with a minimum number of "
+"dependencies.\n"
+"\t\t\t\t\t"
+
+#: apps/pages/templates/index.html:25
+msgid "Данная версия включает в себя следующие приложения (модули)"
+msgstr "This version includes the following applications (modules)"
+
+#: apps/pages/templates/index.html:27
+msgid "accounts - модуль для работы с пользователями"
+msgstr "accounts - module for working with users"
+
+#: apps/pages/templates/index.html:28
+msgid "gallery - модуль для работы с галереями изображений"
+msgstr "gallery - module for working with image galleries"
+
+#: apps/pages/templates/index.html:29
+msgid "pages - модуль для работы с контентными страницами"
+msgstr "pages - module for working with content pages"
+
+#: apps/pages/templates/index.html:30
+msgid "news - модуль для работы с новостными страницами"
+msgstr "news - module for working with news pages"
+
+#: apps/pages/templates/index.html:34
+msgid "Используемые программное обеспечение"
+msgstr "Used software"
+
+#: apps/pages/templates/index.html:37
+msgid "Серверная часть"
+msgstr "Server side"
+
+#: apps/pages/templates/index.html:46
+msgid "Клиентская часть"
+msgstr "Client side"
+
+#: apps/pages/templates/index.html:55
+msgid "Авторы"
+msgstr "Authors"
+
+#: django_base/urls.py:29
+#, fuzzy
+#| msgid "Администратор"
+msgid "Панель администратора"
+msgstr "Administrators panel"
+
+#: templates/base.html:45
+msgid "Язык"
+msgstr "Language"
+
+#: templates/base.html:66
+msgid "Профиль"
+msgstr "Profile"
+
+#: templates/base.html:68
+msgid "Выйти"
+msgstr "Logout"
+
+#: templates/base.html:77
+msgid "Поиск"
+msgstr "Search"

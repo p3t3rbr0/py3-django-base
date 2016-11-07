@@ -1,0 +1,65 @@
+{% extends "layouts/layout1.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% load pages_tags %}
+
+{% block description %}{% endblock %}
+{% block keywords %}{% endblock %}
+{% block title %}{% trans "Главная" %}{% endblock %}
+
+{% block styles %}{% endblock %}
+
+{% block container %}
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="jumbotron">
+				<h3 class="blue">DjangoBase {% proj_version %} "{% proj_codename %}"</h3>
+				<p>
+					{% blocktrans %}
+					Набор базовых компонентов, для разработки типовых веб-проектов на основе фреймворка Django.
+					Цель данного проекта - иметь под рукой программное решение для быстрого развертывания и последущей доработки типового web-проекта на основе стека Python/Django, с минимальным количеством зависимостей.
+					{% endblocktrans %}
+				</p>
+				<p>
+					<span class="glyphicon glyphicon-leaf"></span>&nbsp;
+					{% trans "Данная версия включает в себя следующие приложения (модули)" %}:
+					<ul>
+						<li>{% trans "accounts - модуль для работы с пользователями" %}</li>
+						<li>{% trans "gallery - модуль для работы с галереями изображений" %}</li>
+						<li>{% trans "pages - модуль для работы с контентными страницами" %}</li>
+						<li>{% trans "news - модуль для работы с новостными страницами" %}</li>
+					</ul>
+				</p>
+				<p>
+					<span class="glyphicon glyphicon-tasks"></span>&nbsp;{% trans "Используемые программное обеспечение" %}:
+					<ul>
+						<li>
+							{% trans "Серверная часть" %}:
+							<ul>
+								<li>Pillow==4.2.1</li>
+								<li>Django==1.11.3</li>
+								<li>django-mptt==0.8.7</li>
+								<li>django-ckeditor==5.3.0</li>
+							</ul>
+						</li>
+						<li>
+							{% trans "Клиентская часть" %}:
+							<ul>
+								<li>JQuery v3.1.1</li>
+								<li>Bootstrap v3.5.7</li>
+							</ul>
+						</li>
+					</ul>
+				</p>
+				<p>
+					<span class="glyphicon glyphicon-user"></span>&nbsp;{% trans "Авторы" %}:
+					<ul>
+						<li>Peter P. Neuromantic <a href="mailto:peter.brovchenko@gmail.com">peter.brovchenko@gmail.com</a></li>
+					</ul>
+				</p>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block scripts %}{% endblock %}
